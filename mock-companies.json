@@ -1,0 +1,241 @@
+{
+    "prices_base": {
+      "RN": 0.75,
+      "SP": 0.92,
+      "MG": 0.88,
+      "RJ": 0.95,
+      "BA": 0.80,
+      "PE": 0.78,
+      "CE": 0.82,
+      "PA": 0.70,
+      "AM": 0.68,
+      "ES": 0.85, 
+      "PB": 0.77,
+      "PI": 0.79,
+      "DF": 0.90,
+      "MA": 0.74,
+      "MT": 0.72,
+      "MS": 0.73,
+      "GO": 0.83,
+      "SE": 0.76,
+      "RO": 0.71,
+      "RR": 0.69,
+      "AC": 0.67,
+      "AP": 0.66,
+      "SC": 0.87,
+      "RS": 0.89,
+      "TO": 0.81
+    },
+    "companies": [
+      {
+        "id": 1,
+        "name": "Clarke Energia Sul",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=clarke_energia_sul",
+        "states": ["SP", "RJ"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.65 },
+          { "type": "Mercado Livre", "price_kwh": 0.58 }
+        ],
+        "total_customers": 5000,
+        "rates": 4.9
+      },
+      {
+        "id": 2,
+        "name": "Vento Norte Potiguar",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=vento_norte_potiguar",
+        "states": ["RN", "PB"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.6 }],
+        "total_customers": 1200,
+        "rates": 4.7
+      },
+      {
+        "id": 3,
+        "name": "Sol Cearense",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=sol_cearense",
+        "states": ["CE", "PI"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.62 },
+          { "type": "Mercado Livre", "price_kwh": 0.55 }
+        ],
+        "total_customers": 3000,
+        "rates": 4.8
+      },
+      {
+        "id": 4,
+        "name": "Energia Amazônica",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_amazonica",
+        "states": ["AM", "PA"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.58 }],
+        "total_customers": 800,
+        "rates": 4.6
+      },
+      {
+        "id": 5,
+        "name": "Luz Capixaba",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_capixaba",
+        "states": ["ES", "MG"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.64 },
+          { "type": "Mercado Livre", "price_kwh": 0.57 }
+        ],
+        "total_customers": 2500,
+        "rates": 4.85
+      },
+      {
+        "id": 6,
+        "name": "Energia do Centro",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_centro",
+        "states": ["DF", "GO"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.63 }],
+        "total_customers": 1500,
+        "rates": 4.75
+      },
+      {
+        "id": 7,
+        "name": "Luz do Nordeste",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_nordeste",
+        "states": ["BA", "SE"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.61 },
+          { "type": "Mercado Livre", "price_kwh": 0.54 }
+        ],
+        "total_customers": 2200,
+        "rates": 4.8
+      },
+      {
+        "id": 8,
+        "name": "Energia do Sul",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_sul",
+        "states": ["RS", "SC"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.59 }],
+        "total_customers": 1800,
+        "rates": 4.7
+      },
+      {
+        "id": 9,
+        "name": "Luz do Norte",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_norte",
+        "states": ["RO", "RR", "AC", "AP", "TO"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.57 },
+          { "type": "Mercado Livre", "price_kwh": 0.5 }
+        ],
+        "total_customers": 900,
+        "rates": 4.65
+      },
+      {
+        "id": 10,
+        "name": "Energia do Centro-Oeste",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_centro_oeste",
+        "states": ["MT", "MS"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.62 }],
+        "total_customers": 1100,
+        "rates": 4.75
+      },
+      {
+        "id": 11,
+        "name": "Luz do Planalto",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_planalto",
+        "states": ["MG", "SP"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.63 },
+          { "type": "Mercado Livre", "price_kwh": 0.56 }
+        ],
+        "total_customers": 2000,
+        "rates": 4.8
+      },
+      {
+        "id": 12,
+        "name": "Energia do Litoral",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_litoral",
+        "states": ["RJ", "ES"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.61 }],
+        "total_customers": 1700,
+        "rates": 4.7
+      }, 
+      {
+        "id": 13,
+        "name": "Luz do Sertão",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_sertao",
+        "states": ["PE", "PB"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.6 },
+          { "type": "Mercado Livre", "price_kwh": 0.53 }
+        ],
+        "total_customers": 1300,
+        "rates": 4.75
+      },
+      {
+        "id": 14,
+        "name": "Energia do Pantanal",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_pantanal",
+        "states": ["MS", "MT"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.62 }],
+        "total_customers": 900,
+        "rates": 4.7
+      },
+      {
+        "id": 15,
+        "name": "Luz do Cerrado",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_cerrado",
+        "states": ["GO", "DF"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.63 },
+          { "type": "Mercado Livre", "price_kwh": 0.56 }
+        ],
+        "total_customers": 1600,
+        "rates": 4.8
+      },
+      {
+        "id": 16,
+        "name": "Energia do Mar",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_mar",
+        "states": ["SC", "RS"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.59 }],
+        "total_customers": 1400,
+        "rates": 4.75
+      },
+      {
+        "id": 17,
+        "name": "Luz do Vale",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_vale",
+        "states": ["PA", "AM"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.58 },
+          { "type": "Mercado Livre", "price_kwh": 0.51 }
+        ],
+        "total_customers": 1000,
+        "rates": 4.65
+      },
+      {
+        "id": 18,
+        "name": "Energia do Sertão",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_sertao",
+        "states": ["PE", "PB"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.6 }],
+        "total_customers": 1300,
+        "rates": 4.75
+      },
+      {
+        "id": 19,
+        "name": "Luz do Pantanal",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=luz_do_pantanal",
+        "states": ["MS", "MT"],
+        "solutions": [
+          { "type": "GD", "price_kwh": 0.62 },
+          { "type": "Mercado Livre", "price_kwh": 0.55 }
+        ],
+        "total_customers": 900,
+        "rates": 4.7
+      },
+      {
+        "id": 20,
+        "name": "Energia do Cerrado",
+        "logo": "https://api.dicebear.com/7.x/identicon/svg?seed=energia_do_cerrado",
+        "states": ["GO", "DF"],
+        "solutions": [{ "type": "GD", "price_kwh": 0.63 }],
+        "total_customers": 1600,
+        "rates": 4.8
+      }
+    ]
+  }

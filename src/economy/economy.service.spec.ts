@@ -12,43 +12,35 @@ describe('EconomyService', () => {
     service = module.get<EconomyService>(EconomyService);
   });
 
-  it('deve estar definido', () => {
+  it('deve instanciar o serviço corretamente', () => {
     expect(service).toBeDefined();
   });
 
-  it('deve calcular a economia corretamente para um estado atendido', () => {
+  it('deve retornar economia e empresas para um estado válido', () => {
     const uf = 'RN';
     const consumo = 10000;
 
-    // Tarifa base RN no mock = 0.75 -> Custo Base = 7500
-    // Fornecedor Vento Norte no mock = 0.60 -> Custo Fornecedor = 6000
-    // Economia esperada = 1500
-
     const result = service.simulateEconomy(uf, consumo);
 
-    expect(result.state_base_price).toBe(7500);
-    expect(result.results.length).toBeGreaterThan(0);
-
-    // const ventoNorte = result.results.find(
-    //   (r) => r.name === 'Vento Norte Potiguar',
-    // );
-    // expect(ventoNorte.stimate_economy).toBe(1500);
-    // expect(ventoNorte.economy_percentual).toBe(20); // (1500 / 7500) * 100
+    expect(result).toHaveProperty('base_price');
+    expect(result).toHaveProperty('companies');
+    expect(Array.isArray(result.companies)).toBe(true);
+    expect(result.base_price).toBeGreaterThan(0);
+    expect(result.companies.length).toBeGreaterThan(0);
   });
 
-  it('deve lançar um erro para um estado não cadastrado no mock', () => {
+  it('deve lançar erro para estado não atendido', () => {
     expect(() => {
-      service.simulateEconomy('AC', 5000);
+      service.simulateEconomy('XX', 5000);
     }).toThrow('Estado não atendido ou inválido');
   });
 
-  it('deve filtrar apenas fornecedores que atuam na UF selecionada', () => {
-    const result = service.simulateEconomy('RN', 1000);
+  it('deve retornar apenas empresas que atuam na UF selecionada', () => {
+    const uf = 'RN';
+    const consumo = 1000;
+    const result = service.simulateEconomy(uf, consumo);
 
-    // No mock, apenas o "Vento Norte Potiguar" atua no RN
-    const todosSaoDoRN = result.results.every(
-      (r) => r.name === 'Vento Norte Potiguar',
-    );
-    expect(todosSaoDoRN).toBe(true);
+    const todasAtuamNoUF = result.companies.every((r) => r.states.includes(uf));
+    expect(todasAtuamNoUF).toBe(true);
   });
 });

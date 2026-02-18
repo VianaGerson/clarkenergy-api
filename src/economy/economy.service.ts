@@ -26,6 +26,7 @@ export class EconomyService {
             name: f.name,
             logo: f.logo,
             type: sol.type,
+            states: f.states,
             price_kwh: sol.price_kwh,
             total_customers: f.total_customers,
             rates: f.rates,

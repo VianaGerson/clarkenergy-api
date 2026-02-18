@@ -38,7 +38,7 @@ export class EconomyService {
 
     return {
       base_price: basePrice,
-      companies: availableCompanies,
+      companies: availableCompanies.sort((a, b) => Number(b.estimate_economy) - Number(a.estimate_economy)),
     };
   }
 }

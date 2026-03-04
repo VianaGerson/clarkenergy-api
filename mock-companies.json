@@ -121,7 +121,7 @@
           { "type": "Mercado Livre", "price_kwh": 0.5 }
         ],
         "total_customers": 900,
-        "rates": 4.65
+        "rates": 2.65
       },
       {
         "id": 10,
@@ -193,7 +193,7 @@
         "states": ["SC", "RS"],
         "solutions": [{ "type": "GD", "price_kwh": 0.59 }],
         "total_customers": 1400,
-        "rates": 4.75
+        "rates": 3.75
       },
       {
         "id": 17,

@@ -1,12 +1,27 @@
 import { Injectable } from '@nestjs/common';
 import * as mockEconomy from '../../mock-companies.json';
 
+interface SimulationResult {
+  base_price: number;
+  companies: {
+    name: string;
+    logo: string;
+    type: string;
+    price_kwh: number;
+    total_customers: number;
+    rates: number;
+    states: string[];
+    estimate_economy: number;
+    economy_percentual: number;
+  }[];
+}
+
 @Injectable()
 export class EconomyService {
 
   private readonly mockData = mockEconomy;
 
-  simulateEconomy(uf: string, consumekWh: number) {
+  simulateEconomy(uf: string, consumekWh: number): SimulationResult {
     const priceBaseUf = this.mockData.prices_base[uf.toUpperCase()];
 
     if (!priceBaseUf) {
@@ -30,15 +45,15 @@ export class EconomyService {
             price_kwh: sol.price_kwh,
             total_customers: f.total_customers,
             rates: f.rates,
-            estimate_economy: economyAbsolut.toFixed(2),
-            economy_percentual: ((economyAbsolut / basePrice) * 100).toFixed(2),
+            estimate_economy: Number(economyAbsolut.toFixed(2)),
+            economy_percentual: Number(((economyAbsolut / basePrice) * 100).toFixed(2)),
           };
         }),
       );
 
     return {
       base_price: basePrice,
-      companies: availableCompanies.sort((a, b) => Number(b.estimate_economy) - Number(a.estimate_economy)),
+      companies: availableCompanies.sort((a, b) => b.estimate_economy - a.estimate_economy),
     };
   }
 }
